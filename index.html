@@ -1,1 +1,152 @@
-This is a personal website for Jenny Heath. Content in progress.
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jenny Heath</title>
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="navbar-fixed">
+      <div class="cats">
+        <div class="nav-highlight nav-home"></div>
+        <a href="#" class="nav-category">HOME</a>
+        <div class="nav-highlight nav-about"></div>
+        <a href="#" class="nav-category">ABOUT</a>
+        <div class="nav-highlight nav-projects"></div>
+        <a href="#" class="nav-category">PROJECTS</a>
+        <div class="nav-highlight nav-contact"></div>
+        <a href="#" class="nav-category">CONTACT</a>
+      </div>
+    </div>
+    <div class="buffer"></div>
+    <div class="home">
+      <div class="overlay">
+      </div>
+        <img src="laptop.png">
+        <p class="home-title">JENNY HEATH<br>
+          <img class="border" src="border.png"><br>WEB DEVELOPER</p>
+    </div>
+    <div class="about">
+      <p class="about-title title">Me</p>
+      <br>
+      <img class="about-img" src="me.png">
+      <br>
+      <p class="about-text">
+        I'm a web developer trained in Ruby, Javascript, PostgreSQL, Rails, Backbone, and more. I'm excited about technologies that connect people and help people learn.
+      </p>
+    </div>
+    <div class="border-buffer"></div>
+    <div class="container section-3">
+      <div class="projects row row-centered">
+        <p class="projects-title title">Projects</p>
+        <br>
+        <a href="http://litgenius.io">
+          <div class="project litgenius col-md-3 col-centered">
+            <div class="project-hover">LitGenius</div>
+          </div>
+        </a>
+        <a href="http://jennyheath.github.io/asteroids">
+          <div class="project asteroids col-md-3 col-centered">
+            <div class="project-hover">Gazorpazorp</div>
+          </div>
+        </a>
+        <a href="http://github.com/jennyheath/chess">
+          <div class="project chess col-md-3 col-centered">
+            <div class="project-hover">Chess</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="overlay">
+      </div>
+      <div class="contact-content">
+        <p class="contact-title title">Say hello!</p>
+        <div class="message-box">
+          <p class="message-title">Send me a message!</p>
+          <form action="http://formspree.io/jennifer.w.heath@gmail.com" method="POST">
+            <div class="row">
+              <input type="text" name="_gotcha" style="display:none" />
+    					<div class="message-input input-name">
+    						<input type="text" name="name" placeholder="Name" />
+    					</div>
+    					<div class="message-input input-email">
+    						<input type="email" name="_replyto" placeholder="Email" />
+    					</div>
+            </div>
+  					<div class="message-input">
+  						<textarea name="message" placeholder="Message" rows="6"></textarea>
+  					</div>
+  					<div class="message-submit">
+  						<input type="submit" value="Send Message" /></li>
+  					</div>
+  				</form>
+        </div>
+        <p class="contact-text">
+          <img class="contact-icon" src="phone.png">(408) 348-3513<br>
+          <img class="contact-icon" src="pin.png">16080 Shannon Road Los Gatos, CA 95032<br>
+          <img class="contact-icon" src="email.png">jennifer.w.heath@gmail.com
+          </p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-icon">
+          <a href="http://github.com/jennyheath"><img class="footer-icon" src="github.png"></a>
+        </div>
+        <div class="footer-icon">
+          <a href="https://www.linkedin.com/in/jwheath"><img class="footer-icon" src="linkedin.png"></a>
+        </div>
+    </div>
+    </div>
+
+    <script>
+      var homeThreshold = $('.home').offset().top + $('.home').height() - 50;
+      var aboutThreshold = $('.about').offset().top + $('.about').height() - 50;
+      var projectsThreshold = $('.projects').offset().top + $('.projects').height() - 100;
+      var contactThreshold = $('.contact').offset().top + $('.contact').height() - 100;
+
+      $('.nav-home').on('click', function () {
+        $.scrollTo($('.home').offset().top, {duration: 700, easing: "swing"});
+      });
+      $('.nav-about').on('click', function () {
+        $.scrollTo($('.about').offset().top, {duration: 700, easing: "swing"});
+      });
+      $('.nav-projects').on('click', function () {
+        $.scrollTo($('.projects').offset().top, {duration: 700, easing: "swing"});
+      });
+      $('.nav-contact').on('click', function () {
+        $.scrollTo($('.contact').offset().top, {duration: 700, easing: "swing"});
+      });
+
+      setInterval(function () {
+        if ($(document).scrollTop() < homeThreshold) {
+          $('.nav-about').removeClass('highlight-nav');
+          $('.nav-projects').removeClass('highlight-nav');
+          $('.nav-contact').removeClass('highlight-nav');
+          $('.nav-home').addClass('highlight-nav');
+        } else if (($(document).scrollTop() > homeThreshold) && ($(document).scrollTop() < aboutThreshold)) {
+          $('.nav-home').removeClass('highlight-nav');
+          $('.nav-projects').removeClass('highlight-nav');
+          $('.nav-contact').removeClass('highlight-nav');
+          $('.nav-about').addClass('highlight-nav');
+        } else if (($(document).scrollTop() > aboutThreshold) && ($(document).scrollTop() < projectsThreshold)) {
+          $('.nav-home').removeClass('highlight-nav');
+          $('.nav-about').removeClass('highlight-nav');
+          $('.nav-contact').removeClass('highlight-nav');
+          $('.nav-projects').addClass('highlight-nav');
+        } else if (($(document).scrollTop() > projectsThreshold) && ($(document).scrollTop() < contactThreshold)) {
+          $('.nav-home').removeClass('highlight-nav');
+          $('.nav-about').removeClass('highlight-nav');
+          $('.nav-projects').removeClass('highlight-nav');
+          $('.nav-contact').addClass('highlight-nav');
+        }
+      }, 20);
+    </script>
+  </body>
+</html>
