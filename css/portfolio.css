@@ -154,25 +154,39 @@ body {
 }
 
 .projects {
-  height: 500px;
   width: 100%;
+  padding-left: 100px;
+  padding-bottom: 100px;
 }
 
 .project {
+  float: left;
   height: 175px;
   background-size: auto 100%;
   padding: 0px !important;
 }
 
+.projects-title {
+  margin-left: -85px;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 .col-centered {
-  float: none;
+  /*float: none;*/
+  float: left;
   margin: 0 auto;
   margin-left: 50px;
+  margin-top: 50px;
 }
 
 .litgenius {
   background-image: url("../assets/litgenius.png");
-  margin-left: 100px;
+  /*margin-left: 100px;*/
   background-repeat: no-repeat;
 }
 
@@ -184,6 +198,11 @@ body {
 .chess {
   background-image: url("../assets/chess.png");
   background-size: auto 100%;
+}
+
+.trello {
+  background-image: url("../assets/trello.png");
+  background-repeat: no-repeat;
 }
 
 .project-hover {
