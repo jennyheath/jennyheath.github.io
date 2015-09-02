@@ -8,108 +8,143 @@
     <script src="js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="css/portfolio.css">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:200,600' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
     <div class="navbar-fixed">
       <div class="cats">
         <div class="nav-highlight nav-home"></div>
-        <a href="#" class="nav-category">HOME</a>
-        <div class="nav-highlight nav-about"></div>
-        <a href="#" class="nav-category">ABOUT</a>
+        <a href="#" class="nav-category">
+          <p class="nav-spacing">h o m e</p>
+        </a>
         <div class="nav-highlight nav-projects"></div>
-        <a href="#" class="nav-category">PROJECTS</a>
+        <a href="#" class="nav-category">
+          <p class="nav-spacing">p r o j e c t s</p>
+        </a>
+        <div class="nav-highlight nav-about"></div>
+        <a href="#" class="nav-category">
+          <p class="nav-spacing">a b o u t</p>
+        </a>
+        <div class="nav-highlight nav-skills"></div>
+        <a href="#" class="nav-category">
+          <p class="nav-spacing">s k i l l s</p>
+        </a>
         <div class="nav-highlight nav-contact"></div>
-        <a href="#" class="nav-category">CONTACT</a>
+        <a href="#" class="nav-category">
+          <p class="nav-spacing">c o n t a c t</p>
+        </a>
       </div>
     </div>
     <div class="buffer"></div>
-    <div class="home">
+    <div class="home row">
       <div class="overlay">
       </div>
-        <img src="assets/laptop.png">
-        <p class="home-title">JENNY HEATH<br>
-          <img class="border" src="assets/border.png"><br>WEB DEVELOPER</p>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered home-content">
+        <p class="home-title">
+          JENNY HEATH<br>
+          <br>WEB DEVELOPER
+        </p>
+        <img class="about-img" src="assets/me.png">
+      </div>
+    </div>
+    <div class="container projects group section-3 row row-centered">
+      <p class="projects-title title">PROJECTS</p>
+      <div class="projects-content">
+        <br>
+        <div class="project-container col-md-2 col-xs-2 col-centered">
+          <a class="project-link project litgenius" href="http://litgenius.io" target="_blank">
+            <div class="project-hover">A web-app for annotating academic papers</div>
+          </a>
+          <p class="project-name">LitGenius</p>
+        </div>
+        <div class="project-container col-md-2 col-xs-2 col-centered">
+          <a class="project-link project asteroids" href="http://jennyheath.github.io/asteroids" target="_blank">
+            <div class="project-hover">A variation on asteroids written in Javascript!</div>
+          </a>
+          <p class="project-name">Gazorpazorp</p>
+        </div>
+        <div class="project-container col-md-2 col-xs-2 col-centered">
+          <a class="project-link project chess" href="http://github.com/jennyheath/chess" target="_blank">
+            <div class="project-hover">Command-line chess written in Ruby</div>
+          </a>
+          <p class="project-name">Chess</p>
+        </div>
+        <div class="project-container col-md-2 col-xs-2 col-centered">
+          <a class="project-link project trello" href="http://trellolololo.herokuapp.com/" target="_blank">
+            <div class="project-hover">A clone of Trello</div>
+          </a>
+          <p class="project-name">Trellololo</p>
+        </div>
+      </div>
     </div>
     <div class="about">
-      <p class="about-title title">Me</p>
-      <br>
-      <img class="about-img" src="assets/me.png">
-      <br>
-      <p class="about-text">
-        I'm a web developer trained in Ruby, Javascript, PostgreSQL, Rails, Backbone, and more. I'm excited about technologies that connect people and help people learn.
-        Take a look at my <a href="https://docs.google.com/document/d/1sGcX9ZtiV_DBs5j6lxx64XaWFPiTq_3TxFVzoggxf_E/edit?usp=sharing" target="_blank">resume</a>.
-      </p>
+      <p class="about-title title">ABOUT</p>
+      <div class="about-content col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
+        <p class="about-text">
+          I'm a software engineer with an unlikely background - my undergraduate degree is from UC Berkeley in molecular biology. I gained a familiarity with computer science concepts in college, and the discovery of my love for programming inspired me to enroll in App Academy, an immersive software development bootcamp with a < 5% acceptance rate. There, I became well versed in Ruby (on Rails), SQL, Javascript, Backbone.js, and much more, in addition to learning the advantages of pair programming and test driven development.
+          <br><br>I'm passionate about creating software that connects people in meaningful ways and helps them learn new things. I myself, am excited to learn new things - specifically, new technologies and new ways to solve problems.
+          <br><br>In my spare time I like to build things, make art, read, write, climb trees, try to make people laugh (usually unsuccessfully), and explore new places and ideas. I would love to build things that advance education, science, or the arts, but am open to all types of projects! Drop me a line if you'd like to hear more about me, tell me about yourself or your company, or just chat!
+          <br><br>For more information, take a look at my <a href="https://docs.google.com/document/d/1sGcX9ZtiV_DBs5j6lxx64XaWFPiTq_3TxFVzoggxf_E/edit?usp=sharing" target="_blank">resume</a>.
+        </p>
+      </div>
+      <div class="group"></div>
     </div>
     <div class="border-buffer"></div>
-    <div class="container projects group section-3 row row-centered">
-      <!-- <div class="projects row row-centered"> -->
-        <p class="projects-title title">Projects</p>
-        <br>
-        <a class="project-link project litgenius col-md-3 col-centered" href="http://litgenius.io" target="_blank">
-          <!-- <div class="project litgenius col-md-3 col-centered"> -->
-            <div class="project-hover">LitGenius</div>
-          <!-- </div> -->
-        </a>
-        <a class="project-link project asteroids col-md-3 col-centered" href="http://jennyheath.github.io/asteroids" target="_blank">
-          <!-- <div class="project asteroids col-md-3 col-centered"> -->
-            <div class="project-hover">Gazorpazorp</div>
-          <!-- </div> -->
-        </a>
-        <a class="project-link project chess col-md-3 col-centered" href="http://github.com/jennyheath/chess" target="_blank">
-          <!-- <div class="project chess col-md-3 col-centered"> -->
-            <div class="project-hover">Chess</div>
-          <!-- </div> -->
-        </a>
-        <a class="project-link project trello col-md-3 col-centered" href="http://trellolololo.herokuapp.com/" target="_blank">
-          <!-- <div class="project trello col-md-3 col-centered"> -->
-            <div class="project-hover">Trello clone</div>
-          <!-- </div> -->
-        </a>
-      <!-- </div> -->
+    <div class="skills row">
+      <p class="skills-title title">SKILLS</p>
+      <div class="skills-icons col-centered">
+        <div class="skill">
+          <img class="skills-img" src="assets/ruby.png">
+          <br><p class="skills-text">Ruby</p>
+        </div>
+        <div class="skill">
+          <img class="skills-img" src="assets/javascript.png">
+          <br><p class="skills-text">Javascript</p>
+        </div>
+        <div class="skill">
+          <img class="skills-img" src="assets/git.png">
+          <br><p class="skills-text">Git</p>
+        </div>
+        <div class="skill">
+          <img class="skills-img" src="assets/rails.png">
+          <br><p class="skills-text">Rails</p>
+        </div>
+        <div class="skill">
+          <img class="skills-img" src="assets/postgres.png">
+          <br><p class="skills-text">Postgres</p>
+        </div>
+        <div class="skill">
+          <img class="skills-img" src="assets/backbone.png">
+          <br><p class="skills-text">Backbone</p>
+        </div>
+        <div class="skill">
+          <img class="skills-img" src="assets/html5.png">
+          <br><p class="skills-text">HTML5</p>
+        </div>
+        <div class="skill">
+          <img class="skills-img" src="assets/jquery.png">
+          <br><p class="skills-text">jQuery</p>
+        </div>
+        <div class="skill">
+          <img class="skills-img" src="assets/css3.png">
+          <br><p class="skills-text">CSS3</p>
+        </div>
+      </div>
+      <div class="group"></div>
     </div>
     <div class="contact">
-      <div class="overlay">
-      </div>
-      <div class="contact-content">
-        <p class="contact-title title">Say hello!</p>
-        <div class="message-box">
-          <p class="message-title">Send me a message!</p>
-          <form action="http://formspree.io/jennifer.w.heath@gmail.com" method="POST">
-            <div class="row">
-              <input type="text" name="_gotcha" style="display:none" />
-    					<div class="message-input input-name">
-    						<input type="text" name="name" placeholder="Name" />
-    					</div>
-    					<div class="message-input input-email">
-    						<input type="email" name="_replyto" placeholder="Email" />
-    					</div>
-            </div>
-  					<div class="message-input">
-  						<textarea name="message" placeholder="Message" rows="6"></textarea>
-  					</div>
-  					<div class="message-submit">
-  						<input type="submit" value="Send Message" /></li>
-  					</div>
-  				</form>
-        </div>
-        <p class="contact-text">
-          <img class="contact-icon" src="assets/phone.png">(408) 348-3513<br>
-          <img class="contact-icon" src="assets/pin.png">16080 Shannon Road Los Gatos, CA 95032<br>
-          <img class="contact-icon" src="assets/email.png">jennifer.w.heath@gmail.com
-          </p>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer-content">
-        <div class="footer-icon">
+      <!-- <div class="overlay">
+      </div> -->
+      <p class="contact-title title">CONTACT</p>
+      <div class="contact-content col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
+        <p>jennifer.w.heath@gmail.com</p>
+        <div class="contact-icons">
           <a href="http://github.com/jennyheath" target="_blank"><img class="footer-icon" src="assets/github.png"></a>
+          <a href="https://www.linkedin.com/in/jwheath" target="_blank"><img class="footer-icon footer-icon-last" src="assets/linkedin.png"></a>
         </div>
-        <div class="footer-icon">
-          <a href="https://www.linkedin.com/in/jwheath" target="_blank"><img class="footer-icon" src="assets/linkedin.png"></a>
-        </div>
-    </div>
+      </div>
     </div>
 
     <script>
@@ -117,6 +152,7 @@
       var aboutThreshold = $('.about').offset().top + $('.about').height() - 50;
       var projectsThreshold = $('.projects').offset().top + $('.projects').height() - 100;
       var contactThreshold = $('.contact').offset().top + $('.contact').height() - 100;
+      var skillsThreshold = $('.skills').offset().top + $('.skills').height() - 50;
 
       $('.nav-home').on('click', function () {
         $.scrollTo($('.home').offset().top, {duration: 700, easing: "swing"});
@@ -130,28 +166,41 @@
       $('.nav-contact').on('click', function () {
         $.scrollTo($('.contact').offset().top, {duration: 700, easing: "swing"});
       });
+      $('.nav-skills').on('click', function () {
+        $.scrollTo($('.skills').offset().top, {duration: 700, easing: "swing"});
+      });
 
       setInterval(function () {
         if ($(document).scrollTop() < homeThreshold) {
           $('.nav-about').removeClass('highlight-nav');
           $('.nav-projects').removeClass('highlight-nav');
           $('.nav-contact').removeClass('highlight-nav');
+          $('.nav-skills').removeClass('highlight-nav');
           $('.nav-home').addClass('highlight-nav');
-        } else if (($(document).scrollTop() > homeThreshold) && ($(document).scrollTop() < aboutThreshold)) {
+        } else if (($(document).scrollTop() > projectsThreshold) && ($(document).scrollTop() < aboutThreshold)) {
           $('.nav-home').removeClass('highlight-nav');
           $('.nav-projects').removeClass('highlight-nav');
           $('.nav-contact').removeClass('highlight-nav');
+          $('.nav-skills').removeClass('highlight-nav');
           $('.nav-about').addClass('highlight-nav');
-        } else if (($(document).scrollTop() > aboutThreshold) && ($(document).scrollTop() < projectsThreshold)) {
+        } else if (($(document).scrollTop() > homeThreshold) && ($(document).scrollTop() < projectsThreshold)) {
           $('.nav-home').removeClass('highlight-nav');
           $('.nav-about').removeClass('highlight-nav');
           $('.nav-contact').removeClass('highlight-nav');
+          $('.nav-skills').removeClass('highlight-nav');
           $('.nav-projects').addClass('highlight-nav');
-        } else if (($(document).scrollTop() > projectsThreshold) && ($(document).scrollTop() < contactThreshold)) {
+        } else if (($(document).scrollTop() > skillsThreshold) && ($(document).scrollTop() < contactThreshold)) {
           $('.nav-home').removeClass('highlight-nav');
           $('.nav-about').removeClass('highlight-nav');
           $('.nav-projects').removeClass('highlight-nav');
+          $('.nav-skills').removeClass('highlight-nav');
           $('.nav-contact').addClass('highlight-nav');
+        } else if (($(document).scrollTop() > aboutThreshold) && ($(document).scrollTop() < skillsThreshold)) {
+          $('.nav-home').removeClass('highlight-nav');
+          $('.nav-about').removeClass('highlight-nav');
+          $('.nav-projects').removeClass('highlight-nav');
+          $('.nav-contact').removeClass('highlight-nav');
+          $('.nav-skills').addClass('highlight-nav');
         }
       }, 20);
     </script>
