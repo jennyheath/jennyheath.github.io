@@ -244,6 +244,10 @@ body {
   margin-left: 10%;
 }
 
+.skills {
+  padding-bottom: 12%;
+}
+
 .skills-icons {
   padding-left: 7%;
   padding-bottom: 15%;
@@ -275,7 +279,7 @@ body {
   background-position: 80% 80%;
   color: #000;
   background-attachment: fixed;
-  padding-bottom: 7%;
+  padding-bottom: 12%;
 }
 
 /*.contact > .overlay {
